@@ -1,0 +1,658 @@
+<!DOCTYPE html><html lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>De Mí Para Ti — Amor y Amistad</title>
+<!-- Fonts: Roboto, Dancing Script & Playfair Display -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,500&amp;family=Roboto:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#b0251b",
+          "primary-container": "#d33f30",
+          "secondary": "#825500",
+          "secondary-container": "#fdaf2a",
+          "surface": "#fff8f5",
+          "surface-container-lowest": "#ffffff",
+          "surface-container-low": "#fff1ea",
+          "surface-container": "#ffeadf",
+          "surface-container-high": "#fbe4d7",
+          "on-surface": "#251911",
+          "on-surface-variant": "#5a413d",
+          "terracotta-matte": "#bf5b47",
+          "porcelain-cream": "#fcf8f4",
+          "blush-matte": "#ecd6cc"
+        },
+        fontFamily: {
+          "script": ["'Dancing Script'", "cursive"],
+          "body": ["'Roboto'", "sans-serif"],
+          "headline": ["'Playfair Display'", "serif"]
+        }
+      }
+    }
+  }
+</script>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: #fff8f5;
+    font-family: 'Roboto', sans-serif;
+  }
+  ::-webkit-scrollbar { display: none; }
+
+  /* ================= ESTILO ESCULTÓRICO MATE & RELIEVE SÓLIDO ================= */
+  .text-sculpted-solid {
+    font-family: 'Roboto', sans-serif;
+    color: #3b221a;
+    text-shadow:
+      0 -1.5px 0.5px rgba(255, 255, 255, 0.95),
+      0 1px 1px rgba(255, 255, 255, 0.7),
+      0 2px 2px rgba(110, 48, 38, 0.28),
+      0 4px 6px rgba(58, 25, 18, 0.18);
+  }
+
+  .text-script-sculpted {
+    font-family: 'Dancing Script', cursive;
+    color: #b0251b;
+    text-shadow:
+      0 -1px 0 rgba(255, 255, 255, 0.95),
+      0 1px 2px rgba(255, 255, 255, 0.6),
+      0 2px 3px rgba(120, 32, 24, 0.3),
+      0 4px 8px rgba(70, 18, 12, 0.16);
+    display: inline-block;
+  }
+
+  .text-sculpted-terracotta {
+    font-family: 'Dancing Script', cursive;
+    color: #c43c2c;
+    text-shadow:
+      0 -1px 1px rgba(255, 255, 255, 0.9),
+      0 1.5px 2px rgba(90, 24, 18, 0.26),
+      0 3px 6px rgba(45, 15, 10, 0.14);
+  }
+
+  /* Marco Cerámico Esculpido Mate */
+  .frame-sculpted-matte {
+    background: linear-gradient(145deg, #ffffff 0%, #faede5 40%, #edd4c8 100%);
+    box-shadow:
+      inset 0 1.5px 2px rgba(255, 255, 255, 0.95),
+      inset 0 -2px 3px rgba(115, 52, 42, 0.18),
+      0 14px 32px -8px rgba(90, 35, 25, 0.16),
+      0 2px 6px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(230, 202, 192, 0.85);
+  }
+
+  /* Marco Orgánico Esculpido 3D para la fotografía */
+  .frame-sculpted-organic {
+    border-radius: 46% 54% 50% 50% / 54% 48% 52% 46%;
+    background: linear-gradient(150deg, #ffffff 0%, #f9eee7 45%, #ecdad0 100%);
+    box-shadow:
+      inset 0 2px 3px rgba(255, 255, 255, 0.98),
+      inset 0 -2.5px 4px rgba(115, 52, 42, 0.18),
+      0 18px 36px -10px rgba(95, 38, 28, 0.16),
+      0 4px 10px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(232, 208, 198, 0.85);
+  }
+
+  .window-sculpted-organic {
+    border-radius: 44% 56% 48% 52% / 52% 46% 54% 48%;
+  }
+
+  /* Placa esculpida mate */
+  .plate-matte-relief {
+    background: linear-gradient(140deg, #ffffff 0%, #f7eee7 60%, #eedcd2 100%);
+    box-shadow:
+      0 4px 14px rgba(75, 30, 20, 0.1),
+      inset 0 1px 1px rgba(255, 255, 255, 0.95),
+      inset 0 -1px 1.5px rgba(120, 50, 40, 0.16);
+    border: 1px solid rgba(235, 210, 200, 0.85);
+  }
+
+  /* Botón interactivo escultórico mate */
+  .btn-cta-sculpted {
+    background: linear-gradient(140deg, #d94838 0%, #b0251b 55%, #8d1c13 100%);
+    box-shadow:
+      inset 0 1.5px 2px rgba(255, 255, 255, 0.45),
+      inset 0 -2.5px 3px rgba(50, 8, 6, 0.4),
+      0 10px 24px -5px rgba(176, 37, 27, 0.38),
+      0 3px 6px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .btn-cta-sculpted:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow:
+      inset 0 1.5px 2px rgba(255, 255, 255, 0.6),
+      inset 0 -2px 3px rgba(50, 8, 6, 0.4),
+      0 14px 28px -4px rgba(176, 37, 27, 0.48);
+  }
+  .btn-cta-sculpted:active {
+    transform: translateY(1px) scale(0.98);
+  }
+
+  .rose-matte-glyph {
+    filter: drop-shadow(0 2px 3px rgba(95, 30, 22, 0.18));
+    display: inline-block;
+  }
+</style>
+</head>
+<body class="bg-[#fff8f5] font-body text-on-surface antialiased min-h-screen relative selection:bg-surface-container selection:text-primary overflow-x-hidden">
+<!-- ================================================================= -->
+<!-- 1. FONDO VIVO CONTINUO: CORAZONES Y ESTATUAS DE LA LIBERTAD 3D    -->
+<!-- ================================================================= -->
+<canvas class="fixed inset-0 pointer-events-none z-0 w-full h-full" height="3906" id="liveLivingBackgroundCanvas" width="1280"></canvas>
+<!-- ================================================================= -->
+<!-- CONTENIDO PRINCIPAL                                               -->
+<!-- ================================================================= -->
+<main class="relative z-10 flex flex-col items-center w-full">
+<!-- =============================================================== -->
+<!-- BLOQUE 1: CABECERA & PRIMER VIDEO (BUZÓN) EN BUCLE              -->
+<!-- =============================================================== -->
+<section class="w-full max-w-3xl px-4 sm:px-6 pt-10 pb-6 flex flex-col items-center">
+<!-- Micro-texto sutil superior en sans-serif limpia -->
+<div class="mb-5 flex items-center justify-center gap-2 px-6 py-2.5 rounded-full plate-matte-relief text-[#4a241b] text-sm sm:text-base font-semibold tracking-wider select-none shadow-sm animate-pulse mx-auto">
+<span class="material-symbols-outlined text-[16px] sm:text-[18px] text-primary" style="font-variation-settings: &quot;FILL&quot; 1;">favorite</span>
+<span class="text-xs sm:text-sm tracking-[0.14em] uppercase text-[#3f221a]">TÓMATE TU TIEMPO Y DESLIZA LENTAMENTE...</span>
+<span class="material-symbols-outlined text-base text-[#bf5b47]">arrow_downward</span>
+</div>
+<!-- Título Principal Fijo Superior Esculpido -->
+<div class="mb-8 text-center flex flex-col items-center justify-center select-none">
+<h1 class="text-sculpted-solid text-3xl sm:text-5xl md:text-7xl font-black uppercase tracking-[0.22em] leading-tight text-center">
+      LLEGÓ UN MENSAJE
+    </h1>
+<span class="text-sculpted-terracotta text-4xl sm:text-6xl md:text-7xl -mt-1 sm:-mt-3 px-3 font-normal tracking-wide">
+      especial para ti
+    </span>
+<div class="w-20 h-1 rounded-full bg-gradient-to-r from-transparent via-[#bf5b47]/40 to-transparent mt-2"></div>
+</div>
+<!-- Video Introductorio / Buzón con Acabado Cerámico Mate Refinado (9:16 vertical, scroll libre) -->
+<div class="relative w-full max-w-[360px] sm:max-w-[380px] mx-auto">
+<div class="relative rounded-[2.2rem] p-2.5 sm:p-3 frame-sculpted-matte">
+<div class="relative w-full aspect-[9/16] rounded-[1.8rem] overflow-hidden shadow-inner bg-[#f6ded1]">
+<!-- Iframe optimizado con pointer-events-none para que no atrape el wheel del mouse y el scroll fluya fluido -->
+<iframe allow="autoplay; fullscreen; encrypted-media" class="w-full h-full block rounded-[1.8rem] border-0 pointer-events-none" src="https://player.cloudinary.com/embed/?cloud_name=urzwziyj&amp;public_id=Buzon_recursos&amp;autoplay=true&amp;loop=true&amp;muted=true" style="width: 100%; height: 100%; border: 0; background-color: transparent;"></iframe>
+</div>
+</div>
+</div>
+</section>
+<!-- =============================================================== -->
+<!-- BLOQUE 1.5: LA INVITACIÓN (FRASE + BOTÓN DE ACCIÓN SMOOTH SCROLL)-->
+<!-- =============================================================== -->
+<section class="w-full max-w-2xl px-6 py-6 flex flex-col items-center text-center">
+<!-- Indicador delicado de Scroll debajo del buzón -->
+<div class="mb-6 flex items-center justify-center gap-2 px-6 py-2.5 rounded-full plate-matte-relief text-[#4a241b] text-sm sm:text-base font-semibold tracking-wider select-none shadow-sm animate-pulse">
+<span class="material-symbols-outlined text-[16px] sm:text-[18px] text-primary" style="font-variation-settings: &quot;FILL&quot; 1;">favorite</span>
+<span class="text-xs sm:text-sm tracking-[0.14em] uppercase text-[#3f221a]">DESLIZA HACIA ABAJO</span>
+<span class="material-symbols-outlined text-base text-[#bf5b47]">arrow_downward</span>
+</div>
+<!-- Frase de Antesala elegida -->
+<p class="text-sculpted-solid text-xl sm:text-2xl md:text-3xl font-bold tracking-wide text-[#3f221a] max-w-2xl leading-relaxed mb-8 select-none">
+    “Hay <strong class="font-black text-[#2e150f]">palabras</strong> que necesitaban su <strong class="font-black text-[#2e150f]">propio espacio</strong>.”
+  </p>
+<!-- Botón de Acción Escultórico Interactivo -->
+<a class="btn-cta-sculpted inline-flex items-center gap-3 px-10 py-4 rounded-full text-white text-base sm:text-lg font-bold tracking-widest uppercase cursor-pointer select-none" href="#mensaje-central" id="btnDescubrirMensaje">
+<span class="">DESCUBRIR MENSAJE</span>
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: &quot;FILL&quot; 1;">favorite</span>
+<span class="material-symbols-outlined text-lg">arrow_downward</span>
+</a>
+</section>
+<!-- SEPARADOR FLORAL CON ROSAS Y CORAZÓN -->
+<div class="w-full max-w-md py-4 flex items-center justify-center gap-5 select-none opacity-85">
+<div class="h-px flex-1 bg-gradient-to-r from-transparent via-[#d6a595]/50 to-primary/30"></div>
+<div class="flex items-center gap-3 px-3 py-1 rounded-full plate-matte-relief">
+<span class="rose-matte-glyph text-base">🌹</span>
+<span class="material-symbols-outlined text-primary text-base drop-shadow-sm" style="font-variation-settings: &quot;FILL&quot; 1;">favorite</span>
+<span class="rose-matte-glyph text-base">🌹</span>
+</div>
+<div class="h-px flex-1 bg-gradient-to-l from-transparent via-[#d6a595]/50 to-primary/30"></div>
+</div>
+<!-- =============================================================== -->
+<!-- BLOQUE 2: EL MENSAJE CENTRAL / SEGUNDO VIDEO (DIRECTO CLOUDINARY)-->
+<!-- =============================================================== -->
+<section class="w-full relative py-8 sm:py-12 flex justify-center scroll-mt-6" id="mensaje-central">
+<div class="w-full max-w-3xl px-4 sm:px-6 flex flex-col items-center">
+<!-- Indicador destacado de interacción para el video principal -->
+<div class="mb-5 inline-flex items-center gap-2.5 plate-matte-relief px-8 py-3 rounded-full text-[#4a241b] text-sm sm:text-base font-bold uppercase tracking-widest shadow-md">
+<span class="material-symbols-outlined text-lg sm:text-xl text-primary" style="font-variation-settings: &quot;FILL&quot; 1;">play_arrow</span>
+<span class="text-[#3a1d17]">HAZ CLIC PARA VER EL VIDEO</span>
+</div>
+<!-- Marco Cerámico Esculpido Centrado con video nativo 9:16 sin franjas negras -->
+<div class="relative w-full max-w-[400px] sm:max-w-[440px] mx-auto rounded-[2.5rem] p-3 sm:p-4 frame-sculpted-matte">
+<div class="relative w-full aspect-[9/16] rounded-[2rem] overflow-hidden shadow-lg flex items-center justify-center bg-[#fff8f5]"><iframe allow="autoplay; fullscreen; encrypted-media; picture-in-picture" class="w-full h-full block border-0 object-cover" playsinline="" src="https://player.cloudinary.com/embed/?cloud_name=urzwziyj&amp;public_id=Amor%20y%20Amistad%20%28Oscar%20y%20Daily%29" style="width: 100%; height: 100%; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: inherit; object-fit: cover; background-color: transparent;"></iframe></div>
+</div>
+<!-- Indicador Post-Video delicado con detalle -->
+<div class="mt-8 flex flex-col items-center gap-1.5 select-none opacity-90">
+<div class="inline-flex items-center gap-2.5 plate-matte-relief px-6 py-2.5 rounded-full text-[#4a241b] text-sm sm:text-base font-semibold tracking-wider">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: &quot;FILL&quot; 1;">favorite</span>
+<span class="text-[#3f221a] tracking-[0.14em] uppercase text-xs sm:text-sm">SIGUE BAJANDO, AÚN HAY MÁS...</span>
+<span class="material-symbols-outlined text-base text-[#bf5b47] animate-pulse">arrow_downward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SEPARADOR FLORAL SUTIL -->
+<div class="w-full max-w-sm py-6 flex items-center justify-center gap-4 select-none opacity-80">
+<span class="text-xs text-primary/70 transform -rotate-45 select-none">🌸</span>
+<div class="w-12 h-px bg-gradient-to-r from-transparent via-[#bf5b47]/40 to-transparent"></div>
+<div class="w-8 h-8 rounded-full plate-matte-relief flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: &quot;FILL&quot; 1;">favorite</span>
+</div>
+<div class="w-12 h-px bg-gradient-to-r from-transparent via-[#bf5b47]/40 to-transparent"></div>
+<span class="text-xs text-primary/70 transform rotate-45 select-none">🌸</span>
+</div>
+<!-- =============================================================== -->
+<!-- BLOQUE 3: LA PAUSA ROMÁNTICA & DEDICATORIA EN RELIEVE           -->
+<!-- =============================================================== -->
+<section class="w-full max-w-4xl px-6 py-10 sm:py-16 flex flex-col items-center justify-center text-center select-none" id="romanticPauseSection">
+<div class="max-w-3xl mx-auto px-6 sm:px-12 py-12 sm:py-14 rounded-[3rem] bg-[#fffaf7]/85 backdrop-blur-sm border border-[#eedcd2] shadow-[0_14px_34px_-8px_rgba(100,40,30,0.09)]">
+<!-- Dedicatoria esculpida con tipografía Roboto limpia y gran presencia -->
+<p class="text-sculpted-solid text-2xl sm:text-3xl md:text-4xl leading-relaxed tracking-[0.08em] font-black">
+      “Porque un minuto <strong class="font-black text-[#251911]">NO basta para explicar</strong>
+</p>
+<div class="mt-4 sm:mt-6">
+<p class="text-sculpted-solid text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-normal text-[#b0251b] leading-tight">
+        todo lo que <strong class="font-black text-primary underline decoration-[#bf5b47]/40 decoration-2">me haces sentir.</strong>”
+      </p>
+</div>
+</div>
+</section>
+<!-- SEPARADOR SUTIL DE CORAZONES MATE -->
+<div class="w-full max-w-xs py-4 flex items-center justify-center gap-4 select-none opacity-80">
+<div class="h-px flex-1 bg-gradient-to-r from-transparent via-[#d6a595]/50 to-primary/30"></div>
+<span class="material-symbols-outlined text-[#bf5b47] text-lg" style="font-variation-settings: &quot;FILL&quot; 1;">favorite</span>
+<div class="h-px flex-1 bg-gradient-to-l from-transparent via-[#d6a595]/50 to-primary/30"></div>
+</div>
+<!-- =============================================================== -->
+<!-- BLOQUE 4: FOTOGRAFÍA EN MARCO ORGÁNICO CENTRADA & FRASE FINAL    -->
+<!-- =============================================================== -->
+<section class="w-full max-w-2xl px-6 pt-6 pb-16 flex flex-col items-center mx-auto justify-center" id="photoSection">
+<div class="relative w-full max-w-md flex justify-center items-center flex-col mx-auto">
+<!-- Marco Orgánico Cerámico / Asimétrico Esculpido 3D -->
+<div class="relative p-4 sm:p-5 frame-sculpted-organic" style="border-radius: 2.8rem;">
+<!-- Ventana fotográfica interior fija -->
+<div class="relative w-72 sm:w-80 aspect-[9/16] rounded-[2.2rem] overflow-hidden bg-[#fff8f5] border border-white/90 shadow-md"><iframe allow="autoplay; fullscreen; encrypted-media; picture-in-picture" class="w-full h-full block border-0 object-cover" playsinline="" src="https://player.cloudinary.com/embed/?cloud_name=urzwziyj&amp;public_id=sin-t-tulo-create-video-with&amp;autoplay=true&amp;loop=true&amp;muted=true" style="width: 100%; height: 100%; border: 0px; background-color: transparent;"></iframe></div>
+<!-- Placa Escultórica "Mi perfecta, Te amo por siempre" centrada -->
+<div class="absolute -bottom-6 left-1/2 -translate-x-1/2 z-20 plate-matte-relief px-6 sm:px-10 py-3 sm:py-4 rounded-full flex items-center justify-center gap-2 sm:gap-3 shadow-md whitespace-nowrap text-center max-w-[95%] sm:max-w-none">
+<span class="material-symbols-outlined text-lg sm:text-2xl text-primary" style="font-variation-settings: &quot;FILL&quot; 1;">favorite</span>
+<span class="text-sculpted-solid text-sm sm:text-lg tracking-[0.12em] font-extrabold text-[#3a1d17] text-center whitespace-nowrap">Gracias por tanto, <font color="#d94838">mi Baby Baby</font></span>
+<span class="material-symbols-outlined text-lg sm:text-2xl text-primary" style="font-variation-settings: &quot;FILL&quot; 1;">favorite</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SEPARADOR BOTÁNICO DISCRETO -->
+<div class="w-full max-w-sm py-6 flex items-center justify-center gap-4 select-none opacity-85">
+<div class="w-10 h-10 rounded-full plate-matte-relief flex items-center justify-center">
+<span class="material-symbols-outlined text-[#d94838] text-xl" style="font-variation-settings: &quot;FILL&quot; 1;">favorite</span>
+</div>
+<div class="w-12 h-12 rounded-full plate-matte-relief flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: &quot;FILL&quot; 1;">favorite</span>
+</div>
+<div class="w-10 h-10 rounded-full plate-matte-relief flex items-center justify-center">
+<span class="material-symbols-outlined text-[#d94838] text-xl" style="font-variation-settings: &quot;FILL&quot; 1;">favorite</span>
+</div>
+</div>
+<!-- =============================================================== -->
+<!-- BLOQUE 5: EL CIERRE Y PIE DE PÁGINA (FIRMA ROMÁNTICA DEFINITIVA)-->
+<!-- =============================================================== -->
+<footer class="w-full relative flex flex-col items-center justify-center text-center overflow-hidden pb-16 pt-4 select-none">
+<!-- Broche cerámico sutil -->
+<div class="flex items-center justify-center gap-2.5 mb-8">
+<span class="w-2.5 h-2.5 rounded-full plate-matte-relief"></span>
+<span class="w-2 h-2 rounded-full bg-primary/80"></span>
+<span class="w-2.5 h-2.5 rounded-full plate-matte-relief"></span>
+</div>
+<!-- Dedicatoria en cursiva elegante -->
+<div class="relative z-10 px-4">
+<p class="text-sculpted-terracotta text-4xl sm:text-6xl md:text-7xl font-bold tracking-wide leading-tight">
+      Feliz día de amor y amistad.
+    </p>
+</div>
+</footer>
+</main>
+<!-- ================================================================= -->
+<!-- SCRIPTS: FONDO VIVO DINÁMICO (CORAZONES & ESTATUAS DE LA LIBERTAD)-->
+<!-- ================================================================= -->
+<script>
+(function() {
+  const canvas = document.getElementById('liveLivingBackgroundCanvas');
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    let width = (canvas.width = window.innerWidth);
+    let height = (canvas.height = window.innerHeight);
+
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    });
+
+    const HEART_COUNT = 34;
+    const STATUE_COUNT = 15;
+    const floatingElements = [];
+
+    // Paletas cálidas escultóricas en armonía con la temática
+    const STATUE_THEMES = [
+      { fill: '#c95e4e', shadow: 'rgba(150, 48, 38, 0.28)', flame: '#fdaf2a', torchGlow: 'rgba(253, 175, 42, 0.7)' },
+      { fill: '#d9786a', shadow: 'rgba(165, 65, 55, 0.22)', flame: '#ffcc66', torchGlow: 'rgba(255, 204, 102, 0.6)' },
+      { fill: '#b43e32', shadow: 'rgba(130, 32, 24, 0.32)', flame: '#ff9436', torchGlow: 'rgba(255, 148, 54, 0.75)' },
+      { fill: '#de9b8e', shadow: 'rgba(175, 95, 85, 0.20)', flame: '#ffdca8', torchGlow: 'rgba(255, 220, 168, 0.55)' },
+      { fill: '#9c3125', shadow: 'rgba(110, 22, 16, 0.35)', flame: '#fbb040', torchGlow: 'rgba(251, 176, 64, 0.8)' }
+    ];
+
+    const HEART_PALETTES = [
+      { fill: '#fdfbf7', highlight: '#ffffff', shadow: 'rgba(215, 195, 185, 0.45)', border: '#faede7' },
+      { fill: '#f7ded5', highlight: '#fff3ee', shadow: 'rgba(205, 160, 150, 0.4)', border: '#eed3c8' },
+      { fill: '#e69888', highlight: '#f3b4a6', shadow: 'rgba(180, 110, 95, 0.38)', border: '#dba090' },
+      { fill: '#c25848', highlight: '#dc7060', shadow: 'rgba(145, 55, 42, 0.35)', border: '#b95040' },
+      { fill: '#ab271d', highlight: '#c73a2f', shadow: 'rgba(125, 25, 20, 0.32)', border: '#9b2017' }
+    ];
+
+    class MatteHeart {
+      constructor(initial = true) {
+        this.type = 'heart';
+        this.reset(initial);
+      }
+
+      reset(initial = false) {
+        this.x = Math.random() * width;
+        const tier = Math.random();
+        if (tier < 0.35) {
+          this.scale = 1.4 + Math.random() * 0.8;
+          this.speedY = -(0.32 + Math.random() * 0.35);
+          this.opacity = 0.35 + Math.random() * 0.35;
+        } else if (tier < 0.78) {
+          this.scale = 2.2 + Math.random() * 1.1;
+          this.speedY = -(0.24 + Math.random() * 0.3);
+          this.opacity = 0.42 + Math.random() * 0.38;
+        } else {
+          this.scale = 3.4 + Math.random() * 1.2;
+          this.speedY = -(0.18 + Math.random() * 0.22);
+          this.opacity = 0.3 + Math.random() * 0.32;
+        }
+
+        this.y = initial ? Math.random() * (height + 140) : height + 50 + Math.random() * 80;
+        this.oscFreq = 0.006 + Math.random() * 0.01;
+        this.oscAmp = 0.8 + Math.random() * 1.8;
+        this.oscStep = Math.random() * Math.PI * 2;
+        this.rotZ = (Math.random() - 0.5) * 0.4;
+        this.rotSpeed = (Math.random() - 0.5) * 0.0018;
+        this.palette = HEART_PALETTES[Math.floor(Math.random() * HEART_PALETTES.length)];
+      }
+
+      update() {
+        this.oscStep += this.oscFreq;
+        this.y += this.speedY;
+        this.x += Math.sin(this.oscStep) * this.oscAmp;
+        this.rotZ += this.rotSpeed;
+
+        if (this.y < -120) {
+          this.reset(false);
+        }
+      }
+
+      draw() {
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.rotZ);
+        ctx.scale(this.scale, this.scale);
+
+        ctx.beginPath();
+        const s = 1.3;
+        ctx.moveTo(0, s * -4);
+        ctx.bezierCurveTo(-s * 6, -s * 10, -s * 12, -s * 2, 0, s * 10);
+        ctx.bezierCurveTo(s * 12, -s * 2, s * 6, -s * 10, 0, -s * 4);
+        ctx.closePath();
+
+        ctx.globalAlpha = this.opacity;
+        ctx.fillStyle = this.palette.fill;
+        ctx.shadowColor = this.palette.shadow;
+        ctx.shadowBlur = 14;
+        ctx.shadowOffsetY = 6;
+        ctx.fill();
+
+        ctx.lineWidth = 1.1;
+        ctx.strokeStyle = this.palette.border;
+        ctx.stroke();
+
+        ctx.shadowColor = 'transparent';
+        ctx.beginPath();
+        ctx.ellipse(-s * 3, -s * 4.5, s * 2.2, s * 1.3, -Math.PI / 4, 0, Math.PI * 2);
+        ctx.fillStyle = this.palette.highlight;
+        ctx.globalAlpha = this.opacity * 0.45;
+        ctx.fill();
+
+        ctx.restore();
+      }
+    }
+
+    // Silueta e ilustración de la Estatua de la Libertad con pedestal, túnica drapeada, brazo alzado, antorcha con llama luminosa, corona radiada y tabla de la ley
+    class StatueOfLiberty {
+      constructor(initial = true) {
+        this.type = 'statue';
+        this.reset(initial);
+      }
+
+      reset(initial = false) {
+        this.x = Math.random() * width;
+        const tier = Math.random();
+        if (tier < 0.35) {
+          this.scale = 0.45 + Math.random() * 0.25; // Pequeñas
+          this.speedY = -(0.20 + Math.random() * 0.22);
+          this.opacity = 0.28 + Math.random() * 0.22;
+        } else if (tier < 0.78) {
+          this.scale = 0.75 + Math.random() * 0.32; // Medianas
+          this.speedY = -(0.15 + Math.random() * 0.18);
+          this.opacity = 0.40 + Math.random() * 0.25;
+        } else {
+          this.scale = 1.15 + Math.random() * 0.35; // Grandes
+          this.speedY = -(0.12 + Math.random() * 0.14);
+          this.opacity = 0.48 + Math.random() * 0.26;
+        }
+
+        this.y = initial ? Math.random() * (height + 220) : height + 100 + Math.random() * 120;
+        this.oscFreq = 0.004 + Math.random() * 0.006;
+        this.oscAmp = 1.2 + Math.random() * 2.0;
+        this.oscStep = Math.random() * Math.PI * 2;
+        this.tilt = 0;
+        this.theme = STATUE_THEMES[Math.floor(Math.random() * STATUE_THEMES.length)];
+      }
+
+      update() {
+        this.oscStep += this.oscFreq;
+        this.y += this.speedY;
+        this.x += Math.sin(this.oscStep) * this.oscAmp;
+        this.tilt = Math.sin(this.oscStep * 0.7) * 0.04;
+
+        if (this.y < -190) {
+          this.reset(false);
+        }
+      }
+
+      draw() {
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.tilt);
+        ctx.scale(this.scale, this.scale);
+        ctx.globalAlpha = this.opacity;
+
+        ctx.shadowColor = this.theme.shadow;
+        ctx.shadowBlur = 12;
+        ctx.shadowOffsetY = 6;
+
+        ctx.fillStyle = this.theme.fill;
+
+        // 1. Pedestal escalonado
+        ctx.beginPath();
+        ctx.moveTo(-18, 52);
+        ctx.lineTo(18, 52);
+        ctx.lineTo(15, 42);
+        ctx.lineTo(-15, 42);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(-13, 42);
+        ctx.lineTo(13, 42);
+        ctx.lineTo(11, 33);
+        ctx.lineTo(-11, 33);
+        ctx.closePath();
+        ctx.fill();
+
+        // 2. Túnica y silueta de la estatua
+        ctx.beginPath();
+        // Base de la túnica sobre el pedestal
+        ctx.moveTo(-9, 33);
+        ctx.lineTo(9, 33);
+        // Costado derecho y drapeado
+        ctx.bezierCurveTo(11, 20, 9, 8, 6, -2);
+        ctx.bezierCurveTo(7, -8, 5, -16, 3, -20);
+        // Cuello y cabeza
+        ctx.lineTo(2, -26);
+        ctx.bezierCurveTo(4, -28, 4, -34, 1.5, -36);
+        ctx.bezierCurveTo(-1.5, -36, -3, -34, -2.5, -28);
+        ctx.lineTo(-2, -23);
+        // Hombro izquierdo y tabla de la ley sostenida
+        ctx.lineTo(-6, -18);
+        ctx.bezierCurveTo(-9, -12, -9, 0, -8, 12);
+        ctx.bezierCurveTo(-8, 22, -10, 28, -9, 33);
+        ctx.closePath();
+        ctx.fill();
+
+        // 3. Brazo izquierdo sosteniendo la tabla (Tabula Ansata)
+        ctx.beginPath();
+        ctx.moveTo(-5, -16);
+        ctx.lineTo(-12, -8);
+        ctx.lineTo(-10, 5);
+        ctx.lineTo(-6, 2);
+        ctx.closePath();
+        ctx.fill();
+
+        // La tabla rectangular
+        ctx.save();
+        ctx.beginPath();
+        ctx.translate(-11, -2);
+        ctx.rotate(0.2);
+        ctx.rect(-3, -6, 6, 11);
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.28)';
+        ctx.fill();
+        ctx.restore();
+
+        // 4. Brazo derecho alzado hacia la antorcha
+        ctx.beginPath();
+        ctx.moveTo(3, -18);
+        ctx.lineTo(10, -26);
+        ctx.lineTo(14, -38);
+        ctx.lineTo(17, -46);
+        ctx.lineTo(13, -46);
+        ctx.lineTo(10, -38);
+        ctx.lineTo(6, -26);
+        ctx.lineTo(1, -16);
+        ctx.closePath();
+        ctx.fill();
+
+        // 5. Antorcha
+        ctx.beginPath();
+        ctx.moveTo(13.5, -46);
+        ctx.lineTo(16.5, -46);
+        ctx.lineTo(18, -50);
+        ctx.lineTo(12, -50);
+        ctx.closePath();
+        ctx.fill();
+
+        // 6. Corona radiada de 7 picos sobre la cabeza
+        ctx.beginPath();
+        const crownBaseY = -35;
+        const rays = [
+          { angle: -Math.PI * 0.85, len: 7 },
+          { angle: -Math.PI * 0.72, len: 9 },
+          { angle: -Math.PI * 0.60, len: 10 },
+          { angle: -Math.PI * 0.50, len: 11 },
+          { angle: -Math.PI * 0.40, len: 10 },
+          { angle: -Math.PI * 0.28, len: 9 },
+          { angle: -Math.PI * 0.15, len: 7 }
+        ];
+
+        for (let r = 0; r < rays.length; r++) {
+          const rx = Math.cos(rays[r].angle) * rays[r].len;
+          const ry = Math.sin(rays[r].angle) * rays[r].len;
+          ctx.moveTo(0, crownBaseY);
+          ctx.lineTo(rx * 0.9, crownBaseY + ry);
+          ctx.lineTo(rx * 0.3, crownBaseY + ry * 0.3);
+        }
+        ctx.fill();
+
+        // 7. Llama dorada / incandescente de la antorcha
+        ctx.save();
+        ctx.shadowColor = this.theme.torchGlow;
+        ctx.shadowBlur = 10;
+        ctx.beginPath();
+        ctx.moveTo(15, -50);
+        ctx.bezierCurveTo(18.5, -53, 19, -58, 15, -63);
+        ctx.bezierCurveTo(12, -58, 11.5, -53, 15, -50);
+        ctx.closePath();
+        ctx.fillStyle = this.theme.flame;
+        ctx.fill();
+
+        // Núcleo luminoso interior de la llama
+        ctx.beginPath();
+        ctx.arc(15, -55, 2, 0, Math.PI * 2);
+        ctx.fillStyle = '#ffffff';
+        ctx.globalAlpha = this.opacity * 0.9;
+        ctx.fill();
+        ctx.restore();
+
+        // Líneas suaves de pliegue / resalte de la túnica
+        ctx.beginPath();
+        ctx.moveTo(-1, -8);
+        ctx.bezierCurveTo(-2, 5, 2, 16, -1, 30);
+        ctx.moveTo(3, -2);
+        ctx.bezierCurveTo(4, 12, 6, 22, 5, 31);
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.35)';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+
+        ctx.restore();
+      }
+    }
+
+    for (let i = 0; i < HEART_COUNT; i++) {
+      floatingElements.push(new MatteHeart(true));
+    }
+    for (let i = 0; i < STATUE_COUNT; i++) {
+      floatingElements.push(new StatueOfLiberty(true));
+    }
+
+    function renderLoop() {
+      ctx.clearRect(0, 0, width, height);
+      for (let i = 0; i < floatingElements.length; i++) {
+        floatingElements[i].update();
+        floatingElements[i].draw();
+      }
+      requestAnimationFrame(renderLoop);
+    }
+    requestAnimationFrame(renderLoop);
+  }
+
+  // Smooth scroll
+  const btnDescubrir = document.getElementById('btnDescubrirMensaje');
+  if (btnDescubrir) {
+    btnDescubrir.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = document.getElementById('mensaje-central');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  }
+})();
+</script>
+
+
+</body></html>
